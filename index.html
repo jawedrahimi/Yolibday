@@ -8,7 +8,6 @@
 </head>
 
 <body>
-  <!-- 🎈 Background balloons -->
   <div class="balloons" aria-hidden="true">
     <span></span><span></span><span></span><span></span><span></span>
     <span></span><span></span><span></span><span></span><span></span>
@@ -17,9 +16,7 @@
 
   <main class="wrap">
     <section class="card" aria-labelledby="title">
-
       <div class="badge">You're Invited 🎉</div>
-
       <h1 id="title">Yalda’s 14th Birthday 🎂</h1>
 
       <p class="meta">
@@ -27,22 +24,8 @@
         <span class="pill">⏰ 7:35 PM</span>
       </p>
 
-      <!-- ✅ Photo spot + upload -->
       <div class="photoBox">
-        <img id="yaldaPhoto" class="photo" alt="Yalda's photo" />
-        <div id="photoFallback" class="photoFallback" hidden>
-          <div class="photoHintTitle">Add Yalda’s picture</div>
-          <div class="photoHintText">
-            Put a JPG in <strong>/assets</strong> (example: <strong>yalda.jpg</strong>)<br/>
-            or upload one below (only saved on your device).
-          </div>
-        </div>
-      </div>
-
-      <div class="uploadRow">
-        <label class="fileLabel" for="photoInput">Upload Yalda’s photo</label>
-        <input id="photoInput" class="fileInput" type="file" accept="image/*" />
-        <button id="clearPhoto" class="miniBtn" type="button">Clear</button>
+        <img class="photo" src="assets/yalda.jpg" alt="Yalda's photo" />
       </div>
 
       <p class="note">
@@ -52,13 +35,11 @@
 
       <div class="arena" id="arena" aria-label="RSVP buttons">
         <button id="yesBtn" class="btn yes" type="button">YES ✅</button>
-        <button id="noBtn" class="btn no" type="button" aria-label="No (not really)">NO ❌</button>
+        <button id="noBtn" class="btn no" type="button">NO ❌</button>
       </div>
 
       <div id="message" class="message" role="status" aria-live="polite"></div>
-
       <p class="footer">(Try pressing NO... good luck 😄)</p>
-
     </section>
   </main>
 
