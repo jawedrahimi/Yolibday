@@ -26,6 +26,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Debug repo structure
+        run: |
+          echo "PWD:"
+          pwd
+          echo "ROOT FILES:"
+          ls -la
+          echo "TREE (depth 3):"
+          find . -maxdepth 3 -type f -print
+
+      - name: Ensure Yoli folder exists
+        run: |
+          test -d "Yoli" || (echo "ERROR: Yoli folder not found at repo root" && exit 2)
+          test -f "Yoli/index.html" || (echo "ERROR: Yoli/index.html not found" && exit 2)
+          test -d "Yoli/assets" || (echo "ERROR: Yoli/assets not found" && exit 2)
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
