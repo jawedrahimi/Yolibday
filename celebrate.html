@@ -21,18 +21,11 @@
 
       <h1 class="yayTitle">YAYAYA!!! 🎉🎂</h1>
 
-      <img
-        class="minion"
-        src="assets/minion.gif"
-        alt="Minion celebration"
-        onerror="this.style.display='none'; document.getElementById('gifFallback').hidden=false;"
-      />
-      <div id="gifFallback" class="photoFallback" hidden>
-        <div class="photoHintTitle">Add the Minion GIF</div>
-        <div class="photoHintText">
-          Put a file named <strong>minion.gif</strong> inside <strong>/assets</strong>.
-        </div>
-      </div>
+      <!-- ✅ MP4 “gif” -->
+      <video class="minionVideo" autoplay loop muted playsinline controls>
+        <source src="assets/bh187-minion.mp4" type="video/mp4" />
+        Your browser can’t play this video.
+      </video>
 
       <p class="subText">See you at the party 🎁</p>
 

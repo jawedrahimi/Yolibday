@@ -34,11 +34,8 @@
     height:55px;
     border-radius:50%;
     background: rgba(255,255,255,0.16);
-    filter: blur(.2px);
     animation: floatUp 12s linear infinite;
   }
-  
-  /* spread balloons */
   .balloons span:nth-child(1){ left:6%;  width:34px; height:48px; animation-duration:10s; }
   .balloons span:nth-child(2){ left:14%; width:52px; height:74px; animation-duration:16s; }
   .balloons span:nth-child(3){ left:24%; width:28px; height:40px; animation-duration:11s; }
@@ -85,7 +82,7 @@
     border-radius:999px;
     border:1px solid var(--ring);
     background: rgba(255,255,255,.05);
-    font-weight:800;
+    font-weight:900;
     letter-spacing:.3px;
     margin-bottom:14px;
   }
@@ -111,7 +108,7 @@
     border-radius:999px;
     border:1px solid var(--ring);
     background: rgba(255,255,255,.05);
-    font-weight:700;
+    font-weight:800;
   }
   
   .note{
@@ -157,7 +154,7 @@
     background: rgba(239,68,68,.16);
     color: #ffe9e9;
     outline: 2px solid rgba(239,68,68,.25);
-    position:absolute; /* moved by JS */
+    position:absolute;
     left: 62%;
     top: 62%;
   }
@@ -178,7 +175,7 @@
   
   /* Photo spot */
   .photoBox{
-    margin: 8px 0 12px;
+    margin: 8px 0 10px;
     border:1px solid var(--ring);
     border-radius:18px;
     background: rgba(0,0,0,.18);
@@ -200,24 +197,62 @@
   }
   .photoHintText{
     color: var(--muted);
-    font-weight:700;
+    font-weight:800;
+  }
+  
+  /* Upload row */
+  .uploadRow{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    flex-wrap:wrap;
+    margin-bottom: 10px;
+  }
+  
+  .fileLabel{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:10px 12px;
+    border-radius:12px;
+    border:1px solid var(--ring);
+    background: rgba(255,255,255,.06);
+    font-weight:900;
+    cursor:pointer;
+  }
+  
+  .fileInput{
+    display:none;
+  }
+  
+  .miniBtn{
+    padding:10px 12px;
+    border-radius:12px;
+    border:1px solid var(--ring);
+    background: rgba(255,255,255,.06);
+    color: var(--text);
+    font-weight:900;
+    cursor:pointer;
   }
   
   /* Celebrate page */
   .yayTitle{
     margin-top: 10px;
   }
-  .minion{
-    width: min(340px, 92%);
+  
+  .minionVideo{
+    width: min(360px, 95%);
     border-radius: 16px;
     border:1px solid var(--ring);
     box-shadow: 0 16px 40px rgba(0,0,0,.35);
-    margin: 14px 0 10px;
+    margin: 14px 0 8px;
+    background: rgba(0,0,0,.25);
   }
+  
   .subText{
     margin: 0 0 14px;
     color: var(--muted);
-    font-weight:800;
+    font-weight:900;
   }
   .actions{
     display:flex;

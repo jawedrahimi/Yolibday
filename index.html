@@ -27,20 +27,22 @@
         <span class="pill">⏰ 7:35 PM</span>
       </p>
 
-      <!-- ✅ Picture spot -->
+      <!-- ✅ Photo spot + upload -->
       <div class="photoBox">
-        <img
-          class="photo"
-          src="assets/yalda.jpg"
-          alt="Yalda's photo"
-          onerror="this.style.display='none'; document.getElementById('photoFallback').hidden=false;"
-        />
+        <img id="yaldaPhoto" class="photo" alt="Yalda's photo" />
         <div id="photoFallback" class="photoFallback" hidden>
           <div class="photoHintTitle">Add Yalda’s picture</div>
           <div class="photoHintText">
-            Put a file named <strong>yalda.jpg</strong> inside <strong>/assets</strong> folder.
+            Put a JPG in <strong>/assets</strong> (example: <strong>yalda.jpg</strong>)<br/>
+            or upload one below (only saved on your device).
           </div>
         </div>
+      </div>
+
+      <div class="uploadRow">
+        <label class="fileLabel" for="photoInput">Upload Yalda’s photo</label>
+        <input id="photoInput" class="fileInput" type="file" accept="image/*" />
+        <button id="clearPhoto" class="miniBtn" type="button">Clear</button>
       </div>
 
       <p class="note">
