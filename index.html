@@ -8,38 +8,52 @@
 </head>
 
 <body>
+  <!-- 🎈 Background balloons -->
+  <div class="balloons" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span>
+  </div>
+
   <main class="wrap">
-    <section class="card">
+    <section class="card" aria-labelledby="title">
 
       <div class="badge">You're Invited 🎉</div>
 
-      <h1>Yalda’s 14th Birthday 🎂</h1>
+      <h1 id="title">Yalda’s 14th Birthday 🎂</h1>
 
       <p class="meta">
         <span class="pill">📅 March 12, 2026</span>
         <span class="pill">⏰ 7:35 PM</span>
       </p>
 
+      <!-- ✅ Picture spot -->
+      <div class="photoBox">
+        <img
+          class="photo"
+          src="assets/yalda.jpg"
+          alt="Yalda's photo"
+          onerror="this.style.display='none'; document.getElementById('photoFallback').hidden=false;"
+        />
+        <div id="photoFallback" class="photoFallback" hidden>
+          <div class="photoHintTitle">Add Yalda’s picture</div>
+          <div class="photoHintText">
+            Put a file named <strong>yalda.jpg</strong> inside <strong>/assets</strong> folder.
+          </div>
+        </div>
+      </div>
+
       <p class="note">
         Come celebrate with us! <br />
         <strong>🎁 Present required (one per person).</strong>
       </p>
 
-      <div class="arena" id="arena">
-        <button id="yesBtn" class="btn yes">YES ✅</button>
-        <button id="noBtn" class="btn no">NO ❌</button>
+      <div class="arena" id="arena" aria-label="RSVP buttons">
+        <button id="yesBtn" class="btn yes" type="button">YES ✅</button>
+        <button id="noBtn" class="btn no" type="button" aria-label="No (not really)">NO ❌</button>
       </div>
 
-      <div id="message" class="message"></div>
-
-      <!-- 🎉 Hidden Celebration -->
-      <div id="celebrate" class="celebrate" hidden>
-        <img
-          src="https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif"
-          alt="Minion Celebration"
-        />
-        <div class="yay">yYAYAYYAYA 🎉🎂</div>
-      </div>
+      <div id="message" class="message" role="status" aria-live="polite"></div>
 
       <p class="footer">(Try pressing NO... good luck 😄)</p>
 

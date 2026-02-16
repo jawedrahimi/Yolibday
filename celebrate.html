@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YAYAYA 🎉</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- 🎈 Background balloons -->
+  <div class="balloons" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span>
+  </div>
+
+  <main class="wrap">
+    <section class="card center">
+      <div class="badge">RSVP CONFIRMED ✅</div>
+
+      <h1 class="yayTitle">YAYAYA!!! 🎉🎂</h1>
+
+      <img
+        class="minion"
+        src="assets/minion.gif"
+        alt="Minion celebration"
+        onerror="this.style.display='none'; document.getElementById('gifFallback').hidden=false;"
+      />
+      <div id="gifFallback" class="photoFallback" hidden>
+        <div class="photoHintTitle">Add the Minion GIF</div>
+        <div class="photoHintText">
+          Put a file named <strong>minion.gif</strong> inside <strong>/assets</strong>.
+        </div>
+      </div>
+
+      <p class="subText">See you at the party 🎁</p>
+
+      <div class="actions">
+        <a class="btn yes linkBtn" href="index.html">Try Again ↩️</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
